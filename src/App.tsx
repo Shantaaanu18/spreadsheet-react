@@ -35,7 +35,7 @@ const TopNav: React.FC = () => (
         />
         <FaSearch className="absolute left-2 top-2 text-gray-400 text-xs" />
       </div>
-      <button className="rounded-full bg-gray-200 w-8 h-8 flex items-center justify-center text-lg font-bold">DF</button>
+      <div className="w-8 h-8 rounded-full bg-black border" />
     </div>
   </div>
 );
@@ -161,8 +161,8 @@ const SpreadsheetGrid: React.FC<{ data: any[]; visibleColumns: string[]; filterT
             Cell: ({ value }: any) => (
               <a
                 href={value && (value.startsWith('http://') || value.startsWith('https://')) ? value : `https://${value}`}
-                target="_blank"
-                rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
                 className="text-blue-600 underline truncate block max-w-[160px]"
               >
                 {value}
