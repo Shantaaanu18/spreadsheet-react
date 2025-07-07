@@ -775,7 +775,7 @@ const App: React.FC = () => {
   const [jobDetailsOpen, setJobDetailsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<any | null>(null);
 
-  // Export to Excel
+
   const handleExport = () => {
     const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
@@ -783,12 +783,12 @@ const App: React.FC = () => {
     XLSX.writeFile(wb, 'spreadsheet.xlsx');
   };
 
-  // Import from CSV
+  
   const handleImport = (rows: any[]) => {
     setData(d => [...d, ...rows]);
   };
 
-  // Sort logic
+  
   const handleSort = (col: string, dir: 'asc' | 'desc') => {
     setData(d => {
       const sorted = [...d].sort((a: any, b: any) => {
